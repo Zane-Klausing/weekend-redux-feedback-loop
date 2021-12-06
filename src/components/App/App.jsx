@@ -6,6 +6,7 @@ import Understanding from './Understanding';
 import Supported from './Supported';
 import Comments from './Comments';
 import Review from './Review';
+import Success from './Success';
 import {useState} from 'react'
 import { HashRouter as Router, Route, Link } from 'react-router-dom';
 
@@ -33,6 +34,9 @@ function App() {
       </Route>
       <Route exact path="/Review">
         <Review />
+      </Route>
+      <Route exact path="/Success">
+        <Success />
       </Route>
       
       

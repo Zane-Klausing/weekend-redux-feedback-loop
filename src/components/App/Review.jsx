@@ -1,8 +1,11 @@
 import { useSelector } from "react-redux";
 import axios from 'axios'
+import { useHistory } from 'react-router-dom';
 function Review (){
+    const history = useHistory();
     const infoObject = useSelector(store => store.infoForm);
     console.log(infoObject)
+    
 
 
 function submitHandler () {
@@ -10,6 +13,8 @@ function submitHandler () {
     axios.post("/feedback", infoObject)
     .then((response) =>{
         console.log('got a response', response);
+        history.push('/success');
+
     }).catch((error) =>{
         console.log(error);
     })
